@@ -1,3 +1,5 @@
-from Planet import Planet
+from Planetarium import Planetarium
 
-print(str(earth))
+planetarium1 = Planetarium()
+print(str(planetarium1))
+

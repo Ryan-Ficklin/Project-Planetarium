@@ -1,11 +1,11 @@
 class Planet(object):
-    def __init__(self, name, diameter, distance, rings):
+    def __init__(self, name, diameter, distance, moons):
         self.name = name
         self.diameter = diameter
         self.distance = distance
-        self.rings = rings
+        self.moons = moons
     def __str__(self):
         return f'''Name: {self.name},
-Diameter: {self.diameter},
-Distance from Sun: {self.distance},
-Rings: {self.rings} '''
+Diameter: {self.diameter} miles,
+Distance from Sun: {self.distance} miles,
+Moons: {self.moons} '''
