@@ -21,12 +21,23 @@ class Planetarium(object):
         self.planets.append(Planet("Jupiter", 86881, 484260000, 67))
         self.planets.append(Planet("Saturn", 72367, 930450000, 62))
         self.planets.append(Planet("Uranus", 31518, 1841600000, 27))
-        self.planets.append(Planet("Neptune", 30599, 2781900000, 14))
+        self.planets.append(Planet("Neptune", 30599, 2781900000, 14))        
     def printOne(self):
         planetChoice = str(input('''Which planet would you like to review?
-(Please capitalize the first letter) '''))
+(Please capitalize the first letter i.e Mars) '''))
         length = len(self.planets)
         for i in range(length):
             if(self.planets[i].name == planetChoice):
-                print(str(self.planets[i]))
+                infoChoice = int(input("Would you like to the diameter (1) , distance from sun (2), or moons (3), or all (4) of this planet? "))
+                if(infoChoice == 1):
+                    print(str(f"Diameter: {self.planets[i].diameter} miles"))
+                elif(infoChoice == 2):
+                    print(str(f"Distance from Sun: {self.planets[i].distance} miles"))
+                elif(infoChoice == 3):
+                    print(str(f"Moons: {self.planets[i].moons} moons"))
+                if(infoChoice == 4):
+                    print(str(self.planets[i]))
+                
+                
+    
                            
